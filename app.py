@@ -6,39 +6,21 @@ Student ID: [24101888]
 Course: MAT201 Calculus
 Date: January 2026
 Deployment URL: https://mat201-assignment-2.streamlit.app
-
-AI ASSISTANCE DETAILS:
-=====================
-1. Application Framework (80% AI):
-   - Streamlit page structure and layout
-   - Tab system and sidebar design
-   - Interactive widget implementation
-
-2. Mathematical Content (70% AI):
-   - LaTeX formula generation and formatting
-   - Differential calculation algorithms
-   - Error analysis methodology
-
-3. Code Implementation (60% AI):
-   - Function structure and organization
-   - Error handling and validation
-   - Performance optimization suggestions
-
-4. Educational Content (50% AI):
-   - Real-world application examples
-   - Step-by-step explanations
-   - Comparison between basic and advanced examples
-
-AI Tools: ChatGPT 4.0, GitHub Copilot
-Human Verification: All mathematical calculations manually verified
 """
 
 import streamlit as st
 import math
 
 # ============================================
-# DEPLOYMENT INFORMATION
+# STUDENT INFORMATION (INDIVIDUAL SUBMISSION)
 # ============================================
+STUDENT_INFO = {
+    "Name": "[LIU WEIXUAN]",
+    "Student ID": "[24101888]", 
+    "Course": "MAT201 Calculus",
+    "Submission Type": "Individual"
+}
+
 DEPLOYMENT_URL = "https://mat201-assignment-2.streamlit.app"
 GITHUB_REPO = "https://github.com/weixuanliu125-prog/mat201-assignment-2/blob/main/app.py"
 
@@ -142,10 +124,12 @@ st.markdown("""
 st.markdown("<h1 class='main-header'>📐 Multivariable Differential Visualization</h1>", unsafe_allow_html=True)
 st.markdown("### MAT201 Calculus Assignment 2 - Topic: Differentials")
 
-# Display team information
-with st.expander("👥 Team Information", expanded=False):
-    for member in TEAM_MEMBERS:
-        st.write(f"• {member}")
+# Display student information
+with st.expander("👤 Student Information", expanded=False):
+    st.write(f"**Name:** {STUDENT_INFO['Name']}")
+    st.write(f"**Student ID:** {STUDENT_INFO['Student ID']}")
+    st.write(f"**Course:** {STUDENT_INFO['Course']}")
+    st.write(f"**Submission:** {STUDENT_INFO['Submission Type']}")
     
     st.markdown(f"""
     **Deployment Information:**
@@ -806,4 +790,5 @@ if __name__ == "__main__":
         st.session_state.load_example = None
     
     main()
+
 
